@@ -1,5 +1,6 @@
 csfdesign.define("csf/event/icon/resize", {
     require: [],
+    on: "resize",
     class: "-event-icon-size-update",
     process: function(n, e) {
         var style = window.getComputedStyle(e.parentElement, null).getPropertyValue('font-size');
