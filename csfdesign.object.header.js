@@ -4,7 +4,7 @@ csfdesign.define("csf/event/header/scroll", {
     class: "-event-header-scroll",
     process: function(n, e) {
         var scroll_top = $(window).scrollTop();
-        if (scroll_top > 0) {
+        if (scroll_top > 64) {
             if (!$(e).hasClass("-locked-top")) {
                 $(e).addClass("-locked-top");
             }

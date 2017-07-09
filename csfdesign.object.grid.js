@@ -42,6 +42,6 @@ csfdesign.define("csf/object/card", {
     require: [],
     condition: "csf-card",
     process: function(n, e) {
-        $(e).addClass("_grid-card");
+        $(e).addClass("_grid-block clickable");
     }
 });

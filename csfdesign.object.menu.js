@@ -9,6 +9,7 @@ csfdesign.define("csf/object/menu", {
 
         $(e).addClass("_menu-cover");
         $(e).addClass("_closed");
+        $(e).addClass("_disable-select");
 
         if (style == "slider") {
             $(e).addClass("_menu-type-slider");
@@ -95,6 +96,10 @@ csfdesign.define("csf/object/menu", {
         bg.onclick = csfmenu_toggleslider;
         if (e.hasAttribute("data-csftheme-menu-background")) {
             $(bg).css("background-color", e.getAttribute("data-csftheme-menu-background"));
+        } else {
+            if (style == "bubble") {
+                $(bg).css("background-color", csfdesign.getMainColor());
+            }
         }
         $(e).prepend(bg);
 

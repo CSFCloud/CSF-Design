@@ -22,9 +22,14 @@ csfdesign.define("csf/object/icon", {
         if (iconcode.length == 1) {
             $(e).addClass("_icon-char -event-icon-size-update");
         } else {
+            var url = "https://design.csfcloud.com/icon/"+iconcode+".png";
+            if (iconcode.includes("/") || iconcode.includes(".")) {
+                url = iconcode;
+            }
+
             $(e).addClass("_icon-img -event-icon-size-update");
             $(e).html("");
-            $(e).css("background-image", "url('https://design.csfcloud.com/icon/"+iconcode+".png')");
+            $(e).css("background-image", "url('"+url+"')");
         }
         $(e).removeClass("icon");
     }
