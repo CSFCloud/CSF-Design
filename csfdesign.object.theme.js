@@ -1,6 +1,6 @@
 csfdesign.define("csf/object/background", {
     require: [],
-    condition: ".csftheme[data-csftheme-background]",
+    condition: "[data-csftheme-background]",
     process: function(n, e) {
         $(e).css("background-color", e.getAttribute("data-csftheme-background"));
         e.removeAttribute("data-csftheme-background");
@@ -27,7 +27,7 @@ csfdesign.define("csf/event/backgroundresize", {
 });
 csfdesign.define("csf/object/triangle", {
     require: ["csf/event/backgroundresize"],
-    condition: ".csftheme[data-csftheme-background-triangle]",
+    condition: "[data-csftheme-background-triangle]",
     process: function(n, e) {
         var width = 500;
         var height = 500;

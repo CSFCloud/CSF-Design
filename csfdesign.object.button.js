@@ -6,7 +6,7 @@ csfdesign.define("csf/object/button", {
         if (e.hasAttribute("data-csftheme-button-style")) {
             style = e.getAttribute("data-csftheme-button-style");
         }
-        var c = "#2196f3";
+        var c = csfdesign.getMainColor();
         if (e.hasAttribute("data-csftheme-button-color")) {
             c = e.getAttribute("data-csftheme-button-color");
         }

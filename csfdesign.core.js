@@ -5,6 +5,7 @@ class CSFDesign {
         this.events = [];
         this.functions = [];
         this.debug = false;
+        this.maincolor = "#2196f3";
     }
 
     valid(d, t) {
@@ -146,6 +147,14 @@ class CSFDesign {
             }
         }
     }
+
+    getMainColor() {
+        return this.maincolor;
+    }
+
+    setMainColor(clr) {
+        this.maincolor = clr;
+    }
 }
 
 window.csfdesign = new CSFDesign();
@@ -169,6 +178,7 @@ $(function() {
 
         window.setTimeout(function() {
             window.csfdesign.update();
+            window.csfdesign.update("resize");
         }, 1000);
 
         $(document.body).addClass("_page-loaded");

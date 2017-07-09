@@ -3,7 +3,7 @@ csfdesign.define("csf/object/input", {
     condition: "input.csftheme[type!='submit'][type!='reset']",
     process: function(n, e) {
         var id = csfdesign.uuid();
-        var c = "#2196f3";
+        var c = csfdesign.getMainColor();
         if (e.hasAttribute("data-csftheme-input-color")) {
             c = e.getAttribute("data-csftheme-input-color");
         }
@@ -34,11 +34,11 @@ csfdesign.define("csf/object/input", {
         cnt.appendChild(inp);
         e.parentElement.insertBefore(cnt, e);
 
-        if (e.type == "text" || e.type == "number" || e.type == "email") {
+        if (e.type == "text" || e.type == "number" || e.type == "email" || e.type == "password") {
             inp.className = "_input";
 
             var lab = document.createElement("label");
-            lab.className = "_input_label";
+            lab.className = "_input_label _disable-select";
             $(lab).addClass("inputlabel_" + id);
             lab.htmlFor = INPUT_ID;
             cnt.appendChild(lab);
@@ -60,7 +60,7 @@ csfdesign.define("csf/object/input", {
             cnt.appendChild(box);
 
             var lab = document.createElement("label");
-            lab.className = "_checkbox-label";
+            lab.className = "_checkbox-label _disable-select";
             $(lab).addClass("checkboxlabel_" + id);
             lab.htmlFor = INPUT_ID;
             cnt.appendChild(lab);
@@ -92,7 +92,7 @@ csfdesign.define("csf/object/input", {
             cnt.appendChild(box);
 
             var lab = document.createElement("label");
-            lab.className = "_radio-label";
+            lab.className = "_radio-label _disable-select";
             $(lab).addClass("radiolabel_" + id);
             lab.htmlFor = INPUT_ID;
             cnt.appendChild(lab);

@@ -6,7 +6,7 @@ csfdesign.define("csf/object/loader", {
         if (e.hasAttribute("data-csftheme-loading-style")) {
             style = e.getAttribute("data-csftheme-loading-style");
         }
-        var c = "white";
+        var c = csfdesign.getMainColor();
         if (e.hasAttribute("data-csftheme-loading-color")) {
             c = e.getAttribute("data-csftheme-loading-color");
         }
