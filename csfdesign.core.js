@@ -81,7 +81,7 @@ class CSFDesign {
                 console.log("Error found in " + index + ": " + e);
             }
         }
-        this.scan(document.body);
+        this.scan(document.body.parentElement);
     }
 
     scan(dom) {
