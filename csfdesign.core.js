@@ -155,6 +155,25 @@ class CSFDesign {
     setMainColor(clr) {
         this.maincolor = clr;
     }
+
+    stats() {
+        var str = "";
+        str = "Loaded objects:\n";
+        for (var k in this.objects){
+            str += k + "\n";
+        }
+        str += "\n";
+        str += "Loaded events:\n";
+        for (var k in this.events){
+            str += k + "\n";
+        }
+        str += "\n";
+        str += "Loaded functions:\n";
+        for (var k in this.functions){
+            str += k + "\n";
+        }
+        return str;
+    }
 }
 
 window.csfdesign = new CSFDesign();
