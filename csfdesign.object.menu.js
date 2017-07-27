@@ -13,6 +13,13 @@ csfdesign.define("csf/object/menu", {
 
         if (style == "slider") {
             $(e).addClass("_menu-type-slider");
+            if (e.hasAttribute("data-csftheme-menu-dark")) {
+                e.removeAttribute("data-csftheme-menu-dark");
+                $(e).addClass("_dark-menu");
+            }
+            if (e.hasAttribute("data-csftheme-menu-themecolor")) {
+                $(e).addClass("_colored-menu");
+            }
         } else if (style == "bubble") {
             $(e).addClass("_menu-type-bubble");
         }
@@ -20,6 +27,10 @@ csfdesign.define("csf/object/menu", {
         var slider = document.createElement("div");
         if (style == "slider") {
             slider.className = "_menu-slider";
+            if (e.hasAttribute("data-csftheme-menu-themecolor")) {
+                e.removeAttribute("data-csftheme-menu-themecolor");
+                $(slider).css("background-color", csfdesign.getMainColor());
+            }
         } else if (style == "bubble") {
             slider.className = "_menu-fullscreen";
         }

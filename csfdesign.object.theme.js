@@ -73,7 +73,7 @@ csfdesign.define("csf/event/acrylicresize", {
     on: "resize",
     class: "-event-acrylic-background-resize",
     process: function(n, e) {
-        var id = e.getAttribute("data-acrylic-id");
+        /*var id = e.getAttribute("data-acrylic-id");
 
         var ths = $(".acrylicthis-" + id)[0];
 
@@ -84,8 +84,8 @@ csfdesign.define("csf/event/acrylicresize", {
 
         $(e).css("top", (offs.top - poffs.top) + "px");
         $(e).css("left", (offs.left - poffs.left) + "px");
-        $(e).css("width", e.offsetWidth + "px");
-        $(e).css("height", e.offsetHeight + "px");
+        $(e).css("width", ths.offsetWidth + "px");
+        $(e).css("height", ths.offsetHeight + "px");*/
 
         /*var canvas = $(".acryliccanvas-" + id)[0];
         $(canvas).hide();
