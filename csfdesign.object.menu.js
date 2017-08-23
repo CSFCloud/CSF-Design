@@ -91,6 +91,9 @@ csfdesign.define("csf/object/menu", {
                 if (c.hasAttribute("data-href")) {
                     btn.setAttribute("href", c.getAttribute("data-href"));
                 }
+                if ($(c).hasClass("selected")) {
+                    $(btn).addClass("_menu-button-selected");
+                }
                 slider.appendChild(btn);
 
                 if (category !== null) {
@@ -124,6 +127,10 @@ csfdesign.define("csf/object/menu", {
         for (var i = 0; i < 3; i++) {
             var spn = document.createElement("span");
             hamburger.appendChild(spn);
+        }
+
+        if ($("csf-header").hasClass("light")) {
+            $(hamburger).addClass("_black-lines");
         }
 
         //$("csf-header").append(hamburger);
