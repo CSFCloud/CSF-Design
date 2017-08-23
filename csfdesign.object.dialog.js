@@ -78,6 +78,11 @@ csfdesign.define("csf/function/dialog/open", {
             $(dialog).css("height", "");
         }
 
+        if (options.fullscreendialog === true) {
+            $(dialog).css("width", "calc(100% - 60px)");
+            $(dialog).css("height", "calc(100% - 60px)");
+        }
+
         container.removeClass("_hidden");
         container.addClass("_visible");
 
