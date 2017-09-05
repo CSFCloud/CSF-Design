@@ -48,7 +48,9 @@ csfdesign.define("csf/function/toast/show", {
                     btn.className = "_dialog-button";
                     btn.innerHTML = b.title;
                     if (typeof(b.onclick) == "function") {
-                        btn.onclick = b.onclick;
+                        btn.onclick = function() {
+                            b.onclick(toast)
+                        };
                     } else {
                         if (b.onclick == "dismiss") {
                             btn.onclick = function() {
