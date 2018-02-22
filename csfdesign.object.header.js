@@ -4,14 +4,13 @@ csfdesign.define("csf/event/header/scroll", {
     class: "-event-header-scroll",
     process: function(n, e) {
         var scroll_top = $(window).scrollTop();
+        var menu_title = $("._menu-title");
         if (scroll_top > 64) {
-            if (!$(e).hasClass("-locked-top")) {
-                $(e).addClass("-locked-top");
-            }
+            $(e).addClass("-locked-top");
+            menu_title.addClass("-locked-top");
         } else {
-            if ($(e).hasClass("-locked-top")) {
-                $(e).removeClass("-locked-top");
-            }
+            $(e).removeClass("-locked-top");
+            menu_title.removeClass("-locked-top");
         }
     }
 });
