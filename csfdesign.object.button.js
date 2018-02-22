@@ -41,6 +41,7 @@ csfdesign.define("csf/object/button", {
                 $(e).css("background-color", c);
             }
         }
+        e.setAttribute("tabindex", "0");
         $(e).addClass("_disable-select");
         e.removeAttribute("data-csftheme-button-style");
     }
